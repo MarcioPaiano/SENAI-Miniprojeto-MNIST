@@ -37,47 +37,91 @@ Os principais objetivos do projeto são:
 
 ---
 
-# 2. Estrutura do Projeto
+## Estrutura do Projeto
 
-A estrutura utilizada no projeto segue a separação entre dados, notebooks, modelos e resultados.
+O projeto foi organizado separando as imagens utilizadas nos testes,
+o modelo treinado, o notebook principal e as figuras geradas durante
+as etapas de avaliação.
 
 ```text
 SENAI-Miniprojeto-MNIST/
 │
-├── data/
-│   └── external/
-│       ├── celular_fino.jpg
-│       ├── celular_medio.jpg
-│       ├── celular_grosso.jpg
-│       ├── scanner_fino.jpg
-│       ├── scanner_medio.jpg
-│       ├── scanner_grosso.jpg
-│       ├── paint_fino.png
-│       ├── paint_medio.png
-│       └── paint_grosso.png
+├── images/
+│   │
+│   ├── raw/
+│   │   ├── digito_5camf.jpg
+│   │   ├── digito_5camg.jpg
+│   │   ├── digito_5camm.jpg
+│   │   ├── digito_5cf.jpg
+│   │   ├── digito_5cgj.jpg
+│   │   ├── digito_5M.jpg
+│   │   ├── digito_5mc.jpg
+│   │   ├── digito_5P.jpg
+│   │   ├── digito_5PaintBf.jpg
+│   │   ├── digito_5PaintBg.jpg
+│   │   ├── digito_5PaintBm.jpg
+│   │   ├── digito_5PaintF.jpg
+│   │   ├── digito_5PaintG.jpg
+│   │   └── digito_5PaintM.jpg
+│   │
+│   └── processed/
+│       └── predicao_scanner_medio.png
 │
 ├── models/
-│   └── modelo_mlp_final.pkl
+│   └── mlp_final.joblib
 │
 ├── notebook/
-│   └── projeto_mnist.ipynb
+│   └── mnist.ipynb
 │
 ├── reports/
 │   └── figures/
-│       ├── matriz_confusao_knn.png
-│       ├── matriz_confusao_random_forest.png
-│       ├── matriz_confusao_mlp.png
+│       ├── fase_5_3/
 │       ├── comparacao_metricas.png
-│       ├── comparacao_tempo_treino.png
 │       ├── comparacao_tempo_predicao.png
-│       └── fase_5_3/
+│       ├── comparacao_tempo_treino.png
+│       ├── matriz_confusao_knn.png
+│       ├── matriz_confusao_mlp.png
+│       └── matriz_confusao_random_forest.png
 │
 ├── .gitignore
 ├── README.md
 └── requirements.txt
 ```
 
-> Os nomes exatos dos arquivos podem variar de acordo com a versão final do projeto.
+### Descrição dos diretórios
+
+- **`images/raw/`** — contém as imagens próprias originais utilizadas
+  nos experimentos de inferência, incluindo imagens obtidas por celular,
+  scanner e Paint.
+
+- **`images/processed/`** — armazena imagens resultantes do
+  pré-processamento e das etapas de inferência.
+
+- **`models/`** — contém o modelo final selecionado e salvo após o
+  treinamento. O arquivo `mlp_final.joblib` corresponde ao pipeline da
+  MLP escolhida como melhor modelo do projeto.
+
+- **`notebook/`** — contém o notebook principal `mnist.ipynb`, no qual
+  estão documentadas e executadas todas as etapas do projeto, incluindo
+  análise exploratória, pré-processamento, modelagem, avaliação e testes
+  com imagens próprias.
+
+- **`reports/figures/`** — contém as figuras geradas durante a avaliação
+  dos modelos, como matrizes de confusão, comparação de métricas e
+  comparação dos tempos de treinamento e predição.
+
+- **`reports/figures/fase_5_3/`** — contém as figuras específicas da
+  Fase 5.3, referentes aos experimentos de inferência utilizando imagens
+  manuscritas próprias.
+
+- **`.gitignore`** — define arquivos e diretórios que não devem ser
+  versionados pelo Git.
+
+- **`README.md`** — apresenta a documentação geral do projeto,
+  metodologia, resultados e conclusões.
+
+- **`requirements.txt`** — registra as principais dependências Python
+  necessárias para execução do projeto.
 
 ---
 
