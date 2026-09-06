@@ -37,11 +37,11 @@ Os principais objetivos do projeto são:
 
 ---
 
-## Estrutura do Projeto
+# 2. Estrutura do Projeto
 
 O projeto foi organizado separando as imagens utilizadas nos testes,
-o modelo treinado, o notebook principal e as figuras geradas durante
-as etapas de avaliação.
+as imagens processadas, o modelo treinado, o notebook principal e as
+figuras geradas durante as etapas de avaliação.
 
 ```text
 SENAI-Miniprojeto-MNIST/
@@ -65,6 +65,18 @@ SENAI-Miniprojeto-MNIST/
 │   │   └── digito_5PaintM.jpg
 │   │
 │   └── processed/
+│       ├── comparacao_imagens_processadas.png
+│       ├── predicao_celular_fino.png
+│       ├── predicao_celular_grosso.png
+│       ├── predicao_celular_medio.png
+│       ├── predicao_manuscrito_1.png
+│       ├── predicao_manuscrito_2.png
+│       ├── predicao_manuscrito_3.png
+│       ├── predicao_paint_fino.png
+│       ├── predicao_paint_grosso.png
+│       ├── predicao_paint_medio.png
+│       ├── predicao_scanner_fino.png
+│       ├── predicao_scanner_grosso.png
 │       └── predicao_scanner_medio.png
 │
 ├── models/
@@ -91,37 +103,36 @@ SENAI-Miniprojeto-MNIST/
 ### Descrição dos diretórios
 
 - **`images/raw/`** — contém as imagens próprias originais utilizadas
-  nos experimentos de inferência, incluindo imagens obtidas por celular,
-  scanner e Paint.
+  nos experimentos de inferência, incluindo imagens provenientes de
+  celular, scanner e Paint.
 
-- **`images/processed/`** — armazena imagens resultantes do
-  pré-processamento e das etapas de inferência.
+- **`images/processed/`** — contém as imagens geradas após o
+  pré-processamento e as visualizações das previsões realizadas pelo
+  modelo. Também inclui a comparação das imagens processadas e os
+  resultados individuais de celular, scanner, Paint e imagens
+  manuscritas utilizadas nos testes.
 
-- **`models/`** — contém o modelo final selecionado e salvo após o
-  treinamento. O arquivo `mlp_final.joblib` corresponde ao pipeline da
-  MLP escolhida como melhor modelo do projeto.
+- **`models/`** — contém o modelo final selecionado após a comparação
+  dos classificadores. O arquivo `mlp_final.joblib` armazena o pipeline
+  final da rede neural MLP.
 
-- **`notebook/`** — contém o notebook principal `mnist.ipynb`, no qual
-  estão documentadas e executadas todas as etapas do projeto, incluindo
-  análise exploratória, pré-processamento, modelagem, avaliação e testes
-  com imagens próprias.
+- **`notebook/`** — contém o notebook principal `mnist.ipynb`, onde são
+  executadas e documentadas todas as etapas do projeto.
 
-- **`reports/figures/`** — contém as figuras geradas durante a avaliação
-  dos modelos, como matrizes de confusão, comparação de métricas e
-  comparação dos tempos de treinamento e predição.
+- **`reports/figures/`** — contém as figuras utilizadas na análise dos
+  resultados, incluindo matrizes de confusão e gráficos de comparação
+  de métricas e tempos computacionais.
 
-- **`reports/figures/fase_5_3/`** — contém as figuras específicas da
-  Fase 5.3, referentes aos experimentos de inferência utilizando imagens
-  manuscritas próprias.
+- **`images/processed/`** — contém figuras específicas dos testes
+  realizados na Fase 5.3 com imagens próprias.
 
 - **`.gitignore`** — define arquivos e diretórios que não devem ser
-  versionados pelo Git.
+  versionados.
 
-- **`README.md`** — apresenta a documentação geral do projeto,
-  metodologia, resultados e conclusões.
+- **`README.md`** — contém a documentação geral do projeto.
 
-- **`requirements.txt`** — registra as principais dependências Python
-  necessárias para execução do projeto.
+- **`requirements.txt`** — registra as dependências necessárias para
+  execução do projeto.
 
 ---
 
