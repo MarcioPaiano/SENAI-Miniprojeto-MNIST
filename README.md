@@ -69,9 +69,6 @@ SENAI-Miniprojeto-MNIST/
 │       ├── predicao_celular_fino.png
 │       ├── predicao_celular_grosso.png
 │       ├── predicao_celular_medio.png
-│       ├── predicao_manuscrito_1.png
-│       ├── predicao_manuscrito_2.png
-│       ├── predicao_manuscrito_3.png
 │       ├── predicao_paint_fino.png
 │       ├── predicao_paint_grosso.png
 │       ├── predicao_paint_medio.png
