@@ -45,6 +45,8 @@ figuras geradas durante as etapas de avaliação.
 
 ```text
 SENAI-Miniprojeto-MNIST/
+├── appstream.py
+│   └── Aplicação Streamlit para classificação interativa de dígitos
 │
 ├── images/
 │   │
@@ -98,6 +100,8 @@ SENAI-Miniprojeto-MNIST/
 ```
 
 ### Descrição dos diretórios
+
+ - **`appstream.py`** — aplicação web desenvolvida com Streamlit para utilização interativa do modelo final. Permite carregar imagens de dígitos e realizar a classificação utilizando o modelo MLP treinado.
 
 - **`images/raw/`** — contém as imagens próprias originais utilizadas
   nos experimentos de inferência, incluindo imagens provenientes de
